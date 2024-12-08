@@ -201,8 +201,7 @@ export const investingChartData: ApexOptions = {
   states: {
     hover: {
       filter: {
-        type: "darken",
-        value: 1,
+        type: "darken"
       },
     },
   },
