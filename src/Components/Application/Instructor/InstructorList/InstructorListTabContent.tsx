@@ -9,8 +9,6 @@ const InstructorListTabContent = () => {
       <CardBody>
         <TabContent activeTab={activeTab}>
           <TabPane tabId="1"><Row>{createdFormData.map((item, i) => (<InstructorCommon item={item} key={i} />))}</Row></TabPane>
-          <TabPane tabId="2"><Row>{createdFormData.map((item, i) => (item.badge === "Doing" ? <InstructorCommon item={item} key={i} /> : " "))}</Row></TabPane>
-          <TabPane tabId="3"><Row>{createdFormData.map((item, i) => (item.badge === "Done" ? <InstructorCommon item={item} key={i} /> : " "))}</Row></TabPane>
         </TabContent>
       </CardBody>
     </Card>
