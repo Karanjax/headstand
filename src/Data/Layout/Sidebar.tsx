@@ -10,7 +10,7 @@ export const MenuList: MenuItem[] = [
         icon: "Profile",
         type: "sub",
         children: [
-          { path: `/yogastudio/instructors`, title: "Instructor List", type: "link" },
+          { path: `/instructor/instructorlist`, title: "Instructor List", type: "link" },
         ],
       },
     ],

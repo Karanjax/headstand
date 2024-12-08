@@ -1572,6 +1572,20 @@ export const PageNotFound = "Page Not Found";
 // Coming Soon
 export const WeAreComingSoon = "WE ARE COMING SOON";
 
+// Headstand
+export const InstructorListHeading = "Instructor List";
+export const CreateNewInstructors = "Add New Instructor";
+export const InstructorCreates = "Add New Instructor";
+export const Instructor = "Instructor";
+export const UploadInstructorFiles = "Upload Instructor Image";
+export const InstructorNamePlaceholder = "Enter Instructor Name...";
+export const InstructorTitle = "Enter Instructor Title...";
+export const InstructorProgress = "Instructor Progress";
+export const InstructorProgressPlaceholder = "Enter Instructor Progress...";
+export const InstructorStatus = "Instructor Status";
+export const InstructorSize = "Enter Instructor Size";
+export const InstructorSizePlaceholder = "Instructor Size...";
+
 // Project
 export const ProjectListHeading = "Project List";
 export const CreateNewProjects = "Create New Project";

@@ -6,6 +6,7 @@ import StudentWizardSlice from "./Reducers/StudentWizardSlice";
 import VerticalWizardSlice from "./Reducers/VerticalWizardSlice";
 import LetterBoxSlice from "./Reducers/LetterBoxSlice";
 import ProjectSlice from "./Reducers/ProjectSlice";
+import InstructorSlice from "./Reducers/InstructorSlice";
 import FormWizardTwoSlice from "./Reducers/FormWizardTwoSlice";
 import TwoFactorSlice from "./Reducers/TwoFactorSlice";
 import ProductSlice from "./Reducers/ProductSlice";
@@ -28,7 +29,8 @@ const Store = configureStore({
     twoFactor: TwoFactorSlice,
     themeCustomizer: ThemeCustomizerSlice,
     letterBox:LetterBoxSlice,
-    project:ProjectSlice,
+    project: ProjectSlice,
+    instructor: InstructorSlice,
     product:ProductSlice,
     filterData: FilterSlice,
     cartData: CartSlice,
