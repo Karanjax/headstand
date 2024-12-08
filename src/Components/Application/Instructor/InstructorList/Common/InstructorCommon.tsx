@@ -1,7 +1,5 @@
 import { Badge, Col } from 'reactstrap'
 import { Done, ImagePath } from '@/Constant'
-//import InstructorDetails from './InstructorDetails'
-//import InstructorCustomers from './InstructorCustomers'
 import Image from 'next/image'
 import { CommonInstructorInterFace } from '@/Type/Application/InstructorList/InstructorList'
 import { truncateText } from "@/utils/truncateText"
