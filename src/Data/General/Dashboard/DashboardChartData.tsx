@@ -1665,11 +1665,6 @@ export const salesSummaryChartData: ApexOptions = {
     enabled: false,
   },
   states: {
-    normal: {
-      filter: {
-        type: "none",
-      },
-    },
     hover: {
       filter: {
         type: "none",
