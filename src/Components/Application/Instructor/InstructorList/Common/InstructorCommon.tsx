@@ -1,9 +1,11 @@
-import { Badge, Col, Progress } from 'reactstrap'
+import { Badge, Col } from 'reactstrap'
 import { Done, ImagePath } from '@/Constant'
 //import InstructorDetails from './InstructorDetails'
 //import InstructorCustomers from './InstructorCustomers'
 import Image from 'next/image'
 import { CommonInstructorInterFace } from '@/Type/Application/InstructorList/InstructorList'
+import { truncateText } from "@/utils/truncateText"
+
 
 const InstructorCommon: React.FC<CommonInstructorInterFace> = ({ item }) => {
   console.log(item);
@@ -13,15 +15,24 @@ const InstructorCommon: React.FC<CommonInstructorInterFace> = ({ item }) => {
         <h5 className='f-w-500 mb-2'>{item.name}</h5>
         <p className="font-light">{item.title}</p>
         <div className='d-flex mb-2'>
-          <Image width={160} height={160} className='img-160 me-1' src={`${ImagePath}/instructor/${item.image}`} alt='images' />
+          <Image width={160} height={200} className='img-160 me-1' src={`${ImagePath}/instructor/${item.image}`} alt='images' />
         </div>
-        <p>{item.description}</p>
+        <p>{truncateText(item.description,200)}</p>
         <div className='project-status align-items-center gap-1 mt-4'>
           <div className='d-flex mb-2 gap-1'>
-            <p className="mb-0">{item.progress}% </p>
-            <span>{Done}</span>
+            <h5 className='f-w-500 mb-2'>Certifications</h5> 
           </div>
-          <Progress animated color={item.progress === 100 ? 'success' : 'danger'} value={item.progress} style={{ height: '5px' }} />
+          <div className='d-flex mb-2 gap-1'>
+            <div className="font-light">{item.certifications}</div>
+          </div>
+        </div>
+        <div className='project-status align-items-center gap-1 mt-4'>
+          <div className='d-flex mb-2 gap-1'>       
+            <div><h5 className='f-w-500 mb-2'>Specialties</h5></div>
+          </div>
+          <div className='d-flex mb-2 gap-1'>     
+            <div className="font-light">{item.specialties}</div>
+          </div>
         </div>
       </div>
     </Col>
