@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { instructorData } from "@/data/application/InstructorList/InstructorList";
+import { instructorData } from "@/Data/Application/InstructorList/InstructorList";
 
 
 export async function GET() {
