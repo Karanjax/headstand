@@ -9,5 +9,9 @@ export async function GET() {
     )
     .join("");
 
-  return NextResponse.json(htmlContent);
+    return NextResponse.json(htmlContent, {headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Content-Type": "application/json",
+    },
+  });
 }
