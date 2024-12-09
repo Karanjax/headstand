@@ -8,12 +8,11 @@ const TextInputBtn: React.FC = () => {
     const { value: ipAddress } = await Swal.fire<string>({
       title: "Enter your IP address",
       input: "text",
+
       inputLabel: "Your IP address",
       showCancelButton: true,
       inputValidator: (value) => {
-        if (!value) {
-          return "You need to write something!";
-        }
+          return value ? null : "You need to write something!";
       },
     });
 

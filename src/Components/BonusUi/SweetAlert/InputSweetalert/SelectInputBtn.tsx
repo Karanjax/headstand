@@ -26,10 +26,11 @@ const SelectInputBtn = () => {
       inputValidator: (value) => {
         return new Promise((resolve) => {
           if (value === "oranges") {
-            resolve();
-          } else {
-            resolve("You need to select oranges :)");
+            (null); // Correct TypeScript expects a string or null
           }
+           else {
+            resolve("You need to select oranges :)"); // Validation message
+            }
         });
       },
     });

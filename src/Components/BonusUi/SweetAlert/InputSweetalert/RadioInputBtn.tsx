@@ -18,10 +18,8 @@ const RadioInputBtn = () => {
       input: "radio",
       inputOptions,
       inputValidator: (value) => {
-        if (!value) {
-          return "You need to choose something!";
+          return value ? null : "You need to choose something!";
         }
-      }
     });
     if (color) {
       Swal.fire({ html: `You selected: ${color}` });

@@ -15,7 +15,7 @@ const CheckboxInputBtn = () => {
         Continue&nbsp;<i class="fa fa-arrow-right"></i>
       `,
       inputValidator: (result) => {
-        return !result && "You need to agree with T&C";
+        return result ? null : "You need to agree with T&C";
       }
     });
     if (accept) {

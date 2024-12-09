@@ -2,7 +2,6 @@ import acceptLanguage from "accept-language";
 import { createInstance } from "i18next";
 import resourcesToBackend from "i18next-resources-to-backend";
 import { cookies as getCookies, headers as getHeaders } from "next/headers";
-import { cache } from "react";
 import { initReactI18next } from "react-i18next/initReactI18next";
 import "server-only";
 import { fallbackLng, getOptions, languages } from "./settings";
@@ -37,7 +36,7 @@ export async function detectLanguage() {
   return language;
 }
 
-export const getServerTranslations = cache(async (ns: string, options: { keyPrefix?: string } = {}) => {
+export const getServerTranslations = (async (ns: string, options: { keyPrefix?: string } = {}) => {
   const language = await detectLanguage();
   const i18nextInstance = await initServerI18next(ns);
   return {
