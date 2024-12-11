@@ -5,9 +5,10 @@ import { NextResponse, NextRequest } from "next/server";
 export default withAuth(
   function middleware(req: NextRequestWithAuth) {
     const { pathname } = req.nextUrl;
-
+ console.log(pathname);
     // Allow public access to API route
     if (pathname.includes("/api/instructor")) {
+ console.log("Bypassing Auth for Instructor API");
       return NextResponse.next(); // Skip authentication
     }
 
@@ -22,5 +23,5 @@ export default withAuth(
 );
 
 export const config = {
-  matcher: ["/:path*"], // Protect all routes except `/api/instructor`
+  matcher: ["/((?!api/instructor).*)"], // Exclude /api/instructor
 };
