@@ -7,7 +7,7 @@ export default withAuth(
     const { pathname } = req.nextUrl;
 
     // Allow public access to API route
-    if (pathname.startsWith("/api/instructor")) {
+    if (pathname.includes("/api/instructor")) {
       return NextResponse.next(); // Skip authentication
     }
 
